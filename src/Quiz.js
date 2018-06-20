@@ -19,11 +19,10 @@ class Quiz extends Component {
 
         return (
             <div>
-                <QuizQuestion quiz_question={quizData.quiz_questions[0]} />
                 {
                     isQuizEnd ?
                         <QuizEnd /> :
-                        ''
+                        <QuizQuestion quiz_question={this.state.quiz_position - 1} />
                 }
             </div>
         );
